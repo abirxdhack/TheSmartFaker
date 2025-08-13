@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "smartfaker"
-version = "2.18.0"
+version = "3.18.0"
 authors = [{ name = "ISmartCoder", email = "abrixdhackz.info.me@gmail.com" }]
 maintainers = [{ name = "ISmartCoder", email = "abrixdhackz.info.me@gmail.com" }]
 description = "A powerful Asyncrhonous Python library for generating fake addresses, supporting bots, MTProto API frameworks, and Python scripts"
