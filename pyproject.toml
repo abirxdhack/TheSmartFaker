@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "smartfaker"
+version = "2.18.0"
+authors = [{ name = "ISmartCoder", email = "abrixdhackz.info.me@gmail.com" }]
+maintainers = [{ name = "ISmartCoder", email = "abrixdhackz.info.me@gmail.com" }]
+description = "A powerful Asyncrhonous Python library for generating fake addresses, supporting bots, MTProto API frameworks, and Python scripts"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+keywords = ["faker", "fake-data", "address-generator", "mtproto", "telegram-bot", "python-library"]
+classifiers = [
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = ["pycountry"]
+
+[project.urls]
+Homepage = "https://github.com/abirxdhack/TheSmartFaker"
+Documentation = "https://abirxdhack.github.io/SmartFakerDocs"
+Source = "https://github.com/abirxdhack/TheSmartFaker"
+Tracker = "https://github.com/abirxdhack/TheSmartFaker/issues"
+Changelog = "https://github.com/abirxdhack/TheSmartFaker/releases"
+
+[tool.hatch.build]
+include = ["smartfaker/**/*.py", "README.md", "LICENSE"]
+
+[tool.hatch.build.targets.wheel]
+universal = true
