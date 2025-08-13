@@ -1,11 +1,12 @@
 ## SmartFaker
 
-A powerful Python library for generating fake addresses, supporting up to 103 countries. Ideal for bots, MTProto API frameworks, and Python scripts.
+A powerful Asynchronous Python library for generating fake addresses, supporting up to 181 countries. Ideal for bots, MTProto API frameworks, and Python scripts.
 
 ### Installation
-```
+```bash
 pip install smartfaker
 ```
+
 ### Usage
 
 #### Basic Asyncio Example
