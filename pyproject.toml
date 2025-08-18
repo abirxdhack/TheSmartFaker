@@ -4,19 +4,24 @@ build-backend = "hatchling.build"
 
 [project]
 name = "smartfaker"
-version = "3.20.0"
-
-author = "ISmartCoder"
-author-email = "abrixdhackz.info.me@gmail.com"
-
-authors = [{ name = "ISmartCoder", email = "abrixdhackz.info.me@gmail.com" }]
-maintainers = [{ name = "ISmartCoder", email = "abrixdhackz.info.me@gmail.com" }]
-
-description = "A powerful Asyncrhonous Python library for generating fake addresses, supporting bots, MTProto API frameworks, and Python scripts"
+version = "3.25.1"
+description = "A powerful Asynchronous Python library for generating fake addresses and IBANs, supporting bots, MTProto API frameworks, and Python scripts"
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
-keywords = ["faker", "fake-data", "address-generator", "mtproto", "telegram-bot", "python-library"]
+
+authors = [
+    { name = "ISmartCoder", email = "abrixdhackz.info.me@gmail.com" }
+]
+
+author = "ISmartCoder"
+author_email = "abrixdhackz.info.me@gmail.com"
+
+keywords = [
+    "faker", "fake-data", "address-generator", "iban-generator",
+    "mtproto", "telegram-bot", "python-library"
+]
+
 classifiers = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
@@ -26,6 +31,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Topic :: Software Development :: Libraries",
 ]
+
 dependencies = ["pycountry"]
 
 [project.urls]
