@@ -1,0 +1,347 @@
+{% extends "furo/page.html" %}
+
+{% block extrahead %}
+<link rel="canonical" href="https://abirxdhack.github.io/TheSmartFaker/{{ pagename }}.html">
+<link rel="prefetch" href="{{ pathto('_static/smartfaker.png', 1) }}" as="image">
+
+<meta property="og:title" content="{{ title }} &mdash; SmartFaker Documentation">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{ pathto('_static/open-graph.png', 1) }}">
+<meta property="og:url" content="https://abirxdhack.github.io/TheSmartFaker/{{ pagename }}.html">
+<meta property="og:description" content="Fake address and IBAN generator for 200+ countries in Python.">
+<meta property="og:site_name" content="SmartFaker">
+<meta property="og:locale" content="en_US">
+
+<meta name="description" content="Fake address and IBAN generator for 200+ countries in Python.">
+<meta name="theme-color" content="#E04000">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://abirxdhack.github.io/TheSmartFaker/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://abirxdhack.github.io/TheSmartFaker/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+</script>
+{% endblock %}
+
+{% block content %}
+<ul class="breadcrumbs">
+    <li><a href="{{ pathto(master_doc) }}">Home</a> &raquo;</li>
+    <li>{{ title }}</li>
+</ul>
+
+<div class="top-bar">
+    <div class="view-on-github">
+        <a href="https://github.com/abirxdhack/TheSmartFaker" style="font-size: 20px;"><i class="fa-brands fa-github"></i> View on GitHub</a>
+    </div>
+    <div class="github-buttons">
+        <table class="github-button">
+            <tr>
+                <td><a href="https://github.com/abirxdhack/TheSmartFaker"><i class="fa fa-star"></i> Star</a></td>
+                <td><a href="https://github.com/abirxdhack/TheSmartFaker/stargazers"><span id="ire-stars-count">—</span></a></td>
+            </tr>
+        </table>
+        <table class="github-button">
+            <tr>
+                <td><a href="https://github.com/abirxdhack/TheSmartFaker/network/dependents"><i class="fa fa-code"></i> Used by</a></td>
+                <td><a href="https://github.com/abirxdhack/TheSmartFaker/network/dependents"><span id="ire-usedby-count">—</span></a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="horizontal-line"></div>
+
+{{ super() }}
+{% endblock %}
+
+{% block footer %}
+<div class="related-pages">
+    {% if prev %}
+    <a class="prev-page" href="{{ prev.link }}">
+        <i class="fa-solid fa-chevron-left"></i>
+        <span class="ire-nav-label">{{ prev.title }}</span>
+    </a>
+    {% endif %}
+    {% if next %}
+    <a class="next-page" href="{{ next.link }}">
+        <span class="ire-nav-label">{{ next.title }}</span>
+        <i class="fa-solid fa-chevron-right"></i>
+    </a>
+    {% endif %}
+</div>
+
+<div class="ire-footer-wrap">
+    <div class="ire-footer-left">
+        <div class="ire-footer-brand">
+            <strong><a href="{{ pathto(master_doc) }}" class="ire-footer-name">SmartFaker</a></strong>
+        </div>
+        <div class="ire-footer-copy">
+            <i class="fa-regular fa-copyright ire-copy-icon"></i>
+            Copyright 2025 &ndash; <script>document.write(new Date().getFullYear())</script>,
+            <a href="https://github.com/abirxdhack" class="ire-author-link">
+                <span class="ire-author-avatar"><i class="fa-brands fa-github"></i></span>
+                Abir Arafat Chawdhury
+            </a>
+        </div>
+        <div class="ire-footer-license">
+            Released under the
+            <a href="https://opensource.org/licenses/LGPL-3.0" class="ire-license-link">GNU LGPL v3.0</a>
+            license
+        </div>
+    </div>
+
+    <div class="ire-footer-right">
+        <div class="ire-social-row">
+            <a href="https://abirxdhack.github.io/TheSmartFaker/" class="ire-social-badge ire-badge-web" title="Website">
+                <i class="fa-solid fa-globe"></i>
+                <span>Website</span>
+            </a>
+            <a href="https://github.com/abirxdhack/TheSmartFaker" class="ire-social-badge ire-badge-github" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://t.me/smartfaker" class="ire-social-badge ire-badge-telegram" title="Telegram">
+                <i class="fa-brands fa-telegram"></i>
+                <span>Telegram</span>
+            </a>
+            <a href="https://github.com/abirxdhack/TheSmartFaker/releases" class="ire-social-badge ire-badge-releases" title="Releases">
+                <i class="fa-solid fa-rocket"></i>
+                <span>Releases</span>
+            </a>
+            <a href="https://pypi.org/project/smartfaker" class="ire-social-badge ire-badge-pypi" title="PyPI">
+                <i class="fa-brands fa-python"></i>
+                <span>PyPI</span>
+            </a>
+        </div>
+        <a href="https://t.me/smartfaker" class="ire-support-btn">
+            <i class="fa-solid fa-heart"></i>
+            Support SmartFaker
+        </a>
+    </div>
+</div>
+
+<style>
+.ire-footer-wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-background-border);
+    font-size: 0.875rem;
+}
+
+.ire-footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ire-footer-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-brand-content) !important;
+    letter-spacing: 0.01em;
+}
+
+.ire-footer-copy {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-foreground-secondary);
+    flex-wrap: wrap;
+}
+
+.ire-copy-icon {
+    color: var(--color-foreground-muted);
+    font-size: 0.85em;
+}
+
+.ire-author-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--color-foreground-primary) !important;
+    font-weight: 600;
+    transition: color 0.18s;
+}
+
+.ire-author-link:hover {
+    color: var(--color-brand-content) !important;
+}
+
+.ire-author-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #24292e;
+    color: #fff;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+    transition: transform 0.18s;
+}
+
+body[data-theme="dark"] .ire-author-avatar {
+    background: #444c56;
+    color: #cdd9e5;
+}
+
+.ire-author-link:hover .ire-author-avatar {
+    transform: scale(1.12);
+}
+
+.ire-footer-license {
+    color: var(--color-foreground-muted);
+}
+
+.ire-license-link {
+    color: var(--color-brand-content) !important;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 2px;
+    transition: text-decoration-color 0.18s;
+}
+
+.ire-license-link:hover {
+    text-decoration-color: var(--color-brand-content);
+}
+
+.ire-footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.ire-social-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.ire-social-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-decoration: none !important;
+    border: 1.5px solid transparent;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+    white-space: nowrap;
+    color: #fff !important;
+}
+
+.ire-social-badge i {
+    font-size: 0.88rem;
+}
+
+.ire-social-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+    filter: brightness(1.1);
+    color: #fff !important;
+}
+
+.ire-badge-web {
+    background: linear-gradient(135deg, #E04000, #ff6b35);
+    box-shadow: 0 2px 8px rgba(224,64,0,0.30);
+}
+
+.ire-badge-github {
+    background: linear-gradient(135deg, #24292e, #3d444d);
+    box-shadow: 0 2px 8px rgba(36,41,46,0.35);
+}
+
+body[data-theme="dark"] .ire-badge-github {
+    background: linear-gradient(135deg, #444c56, #636e7b);
+    box-shadow: 0 2px 8px rgba(100,116,139,0.30);
+}
+
+.ire-badge-telegram {
+    background: linear-gradient(135deg, #229ED9, #32b8f5);
+    box-shadow: 0 2px 8px rgba(34,158,217,0.35);
+}
+
+.ire-badge-releases {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    box-shadow: 0 2px 8px rgba(124,58,237,0.30);
+}
+
+.ire-badge-pypi {
+    background: linear-gradient(135deg, #3776AB, #FFD343);
+    background: linear-gradient(135deg, #3776AB 40%, #FFD343 100%);
+    box-shadow: 0 2px 8px rgba(55,118,171,0.30);
+}
+
+.ire-support-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 18px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #fff !important;
+    background: linear-gradient(135deg, #e74c3c, #ff6b6b);
+    box-shadow: 0 3px 12px rgba(231,76,60,0.35);
+    text-decoration: none !important;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+    border: none;
+}
+
+.ire-support-btn i {
+    font-size: 0.85rem;
+    animation: ire-heartbeat 1.6s ease-in-out infinite;
+}
+
+.ire-support-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(231,76,60,0.45);
+    filter: brightness(1.08);
+    color: #fff !important;
+}
+
+@keyframes ire-heartbeat {
+    0%, 100% { transform: scale(1); }
+    14% { transform: scale(1.25); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.18); }
+    56% { transform: scale(1); }
+}
+
+@media (max-width: 640px) {
+    .ire-footer-wrap {
+        flex-direction: column;
+    }
+    .ire-footer-right {
+        align-items: flex-start;
+    }
+    .ire-social-row {
+        justify-content: flex-start;
+    }
+}
+</style>
+{% endblock %}

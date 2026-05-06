@@ -1,0 +1,47 @@
+name: Bug report
+description: Report issues affecting the framework
+body:
+  - type: checkboxes
+    attributes:
+      label: Checklist
+      options:
+        - label: I confirmed the error is from SmartFaker, not my own code
+          required: true
+        - label: I searched existing issues including closed ones
+          required: true
+        - label: I reproduced the issue on the latest version from `pip install -U smartfaker`
+          required: true
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: Clear and concise description of the issue
+      placeholder: Description...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Code example
+      placeholder: |
+        from pyrogram import Client
+        ...
+      render: python
+
+  - type: textarea
+    attributes:
+      label: Logs
+      placeholder: |
+        Traceback (most recent call last):
+        ...
+      render: shell
