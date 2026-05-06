@@ -1,0 +1,93 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "smartfaker"
+dynamic = ["version"]
+description = "Fake address and IBAN generator for 200+ countries — async-first Python library"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "ISmartCoder", email = "abirxdhackz@gmail.com" }]
+license = "LGPL-3.0-or-later"
+license-files = ["COPYING", "COPYING.lesser"]
+keywords = [
+    "fake", "faker", "address", "iban", "generator",
+    "testing", "mock", "data", "countries", "bank",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Testing",
+]
+dependencies = ["pycountry"]
+
+[project.urls]
+Homepage  = "https://github.com/ISmartCoder/smartfaker"
+Source    = "https://github.com/ISmartCoder/smartfaker"
+Issues    = "https://github.com/ISmartCoder/smartfaker/issues"
+Community = "https://t.me/TheSmartDev"
+Author    = "https://t.me/ISmartCoder"
+
+[project.optional-dependencies]
+dev = [
+    "hatch",
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov",
+    "twine",
+]
+docs = [
+    "sphinx",
+    "furo",
+    "sphinx-copybutton",
+]
+
+[tool.hatch.version]
+path = "smartfaker/__init__.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "smartfaker/**",
+    "docs/**",
+    "COPYING",
+    "COPYING.lesser",
+    "NOTICE",
+    "README.md",
+    "pyproject.toml",
+    "Makefile",
+]
+exclude = [
+    ".github/",
+    "docs_static/",
+    "**/__pycache__/",
+    "**/*.pyc",
+    "**/*.pyo",
+]
+
+[tool.hatch.build.targets.wheel]
+ignore-vcs = true
+packages = ["smartfaker"]
+exclude = [
+    "**/__pycache__/",
+    "**/*.pyc",
+    "**/*.pyo",
+]
