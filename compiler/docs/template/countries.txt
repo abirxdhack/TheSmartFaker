@@ -1,0 +1,29 @@
+Supported Countries
+===================
+
+SmartFaker ships bundled address data and IBAN generators for the countries
+listed below. The tables are regenerated automatically by the docs compiler
+from the live ``smartfaker/data/`` directory and the
+:data:`smartfaker.iban.COUNTRY_GENERATORS` registry.
+
+Address Data
+------------
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15 85
+
+    * - Code
+      - Country
+{address_rows}
+
+IBAN Generation
+---------------
+
+.. list-table::
+    :header-rows: 1
+    :widths: 15 85
+
+    * - Code
+      - Country
+{iban_rows}
