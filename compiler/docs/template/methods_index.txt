@@ -1,0 +1,17 @@
+Faker Methods
+=============
+
+The :class:`~smartfaker.Faker` class exposes these public methods. Each link
+opens a dedicated reference page generated from the live source docstrings.
+
+.. currentmodule:: smartfaker
+
+.. hlist::
+    :columns: 2
+
+    {hlist}
+
+.. toctree::
+    :hidden:
+
+    {toctree}

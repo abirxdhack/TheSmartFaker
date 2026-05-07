@@ -1,0 +1,49 @@
+{% extends "furo/search.html" %}
+
+{% block extrahead %}
+    {{ super() }}
+    <meta name="description" content="Search the SmartFaker documentation for address generation, IBAN tools, and API reference pages." />
+    <meta name="robots" content="noindex,follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Search — SmartFaker Docs" />
+    <meta property="og:description" content="Search SmartFaker docs for address generation, IBAN utilities, and usage guides." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Search — SmartFaker Docs" />
+    <meta name="twitter:description" content="Search SmartFaker docs for address generation, IBAN utilities, and usage guides." />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script>
+        (function () {
+            "use strict";
+            function getQ() {
+                var src = (window.location.hash || "").replace(/^#\??/, "") ||
+                          (window.location.search || "").replace(/^\?/, "");
+                return (new URLSearchParams(src).get("q") || "").trim();
+            }
+            function tryRun() {
+                var q = getQ();
+                if (!q) return false;
+                if (window.Search && typeof window.Search.performSearch === "function") {
+                    try { if (typeof window.Search.init === "function") window.Search.init(); } catch (e) {}
+                    try { window.Search.performSearch(q); return true; } catch (e) {}
+                }
+                return false;
+            }
+            var attempts = 0;
+            var iv = setInterval(function () {
+                attempts++;
+                if (tryRun() || attempts > 120) clearInterval(iv);
+            }, 100);
+            window.addEventListener("hashchange", function () {
+                attempts = 0;
+                var iv2 = setInterval(function () {
+                    attempts++;
+                    if (tryRun() || attempts > 120) clearInterval(iv2);
+                }, 100);
+            });
+        })();
+    </script>
+{% endblock %}

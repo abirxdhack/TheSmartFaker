@@ -1,0 +1,17 @@
+IBAN Utilities
+==============
+
+Low-level helpers from :mod:`smartfaker.iban` for assembling, validating and
+inspecting IBAN strings. Each link opens a dedicated reference page.
+
+.. currentmodule:: smartfaker.iban
+
+.. hlist::
+    :columns: 2
+
+    {hlist}
+
+.. toctree::
+    :hidden:
+
+    {toctree}
